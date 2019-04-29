@@ -14,13 +14,13 @@
     <div class="container">
         <div class="row">
             <div>
-                <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/index.jsp'"  >生成短链</button></div>
-                 <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/short.jsp'" >通过短链跳转页面</button></div>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/index.jsp'"  >生成短链</button></div>&nbsp;&nbsp;
+                 <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/short.jsp'" >通过短链跳转</button></div>
             </div>
             <div class="col-md-12">
                 <form id="fromItem" method="post">
                     <div class="form-group"> <label>请输入长网址</label> <input type="text" class="form-control" name="longUrl"> <small class="form-text text-muted"></small> </div>
-                    <div class="form-group"> <label>请选择你的短网址的前缀</label><br/><input type="radio" name="shortPrefix" id="preFix1" value="goo.cn" />goo.cn
+                    <div class="form-group"> <label>请选择你的短网址的前缀</label><br/><input type="radio" name="shortPrefix" id="preFix1" value="goo.cn" checked="checked" />goo.cn
                         <input type="radio" name="shortPrefix" id="preFix2" value="sj.cn" />sj.cn<br />
                         <button id="btn3" type="button" class="btn btn-primary">Submit</button></div>
                 </form>
@@ -39,7 +39,7 @@
                 data:$('#fromItem').serialize(),
                 contentType:"application/x-www-form-urlencoded;charset=UTF-8",
                 success:function(data,statue){
-                    alert('成功了:'+data.toString());
+                    alert('短链为:'+data.toString());
                 },
                 error:function(statue1,s){
                     alert("失败了:"+s)

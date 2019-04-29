@@ -21,8 +21,8 @@
     <div class="container">
         <div class="row">
             <div>
-                <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/index.jsp'"  >生成短链</button></div>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/short.jsp'" >通过短链跳转页面</button></div>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/index.jsp'"  >生成短链</button></div>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary" onclick="window.location.href='${pageContext.request.contextPath}/short.jsp'" >通过短链跳转</button></div>
     </div>
     <div class="col-md-12">
         <form id="fromItem" method="post" action="${pageContext.request.contextPath}/redirectUrl.action">
