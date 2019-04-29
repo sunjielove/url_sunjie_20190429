@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shorturl.mapper.ShortUrlMapper">
+    <insert id="addShortUrl" parameterType="com.shorturl.pojo.ShortUrl">
+      insert into t_shorturl(shortUrlCode, longUrl, device,shortPrefix) values (#{shortUrlCode},#{longUrl},#{device},#{shortPrefix})
+    </insert>
+    <select id="findShortUrlByShortCode" resultType="com.shorturl.pojo.ShortUrl">
+        select * from t_shorturl where shortUrlCode = #{shortCode}
+    </select>
+    <select id="findByLongUrl" resultType="com.shorturl.pojo.ShortUrl">
+        select * from t_shorturl where longUrl = #{longUrl}
+    </select>
+
+</mapper>
